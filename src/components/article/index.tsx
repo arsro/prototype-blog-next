@@ -6,6 +6,7 @@ import { Paragraph } from './paragraph'
 type Props = {
   content: string
 }
+
 export const Article: React.FC<Props> = ({ content }) => {
   return (
     <>
