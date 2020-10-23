@@ -1,7 +1,6 @@
 import React from 'react'
 import { useRouter } from 'next/router'
 import styles from './index.module.css'
-import { route } from 'next/dist/next-server/server/router'
 
 export const SiteHeader: React.FC = () => {
   const router = useRouter()
