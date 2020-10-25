@@ -1,6 +1,7 @@
 import { type } from 'os'
 import React from 'react'
 
+import { formatArticle } from '@/utils/article'
 import { Paragraph } from './paragraph'
 
 type Props = {
@@ -10,7 +11,7 @@ type Props = {
 export const Article: React.FC<Props> = ({ content }) => {
   return (
     <>
-      {content.split('\n\n').map((p, i) => (
+      {formatArticle(content).map((p, i) => (
         <Paragraph p={p} key={i} />
       ))}
     </>

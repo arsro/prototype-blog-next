@@ -5,6 +5,7 @@ import { useRouter } from 'next/router'
 import { Editor } from '@/components/editor'
 import { SiteHeader, SiteHeaderItem } from '@/components/site-header'
 import { Button } from '@/components/button'
+import { UserIcon } from '@/components/user-icon'
 import { usePostArticleMutation } from '@/generated/graphql'
 
 import styles from './index.module.css'
@@ -59,7 +60,7 @@ const PostPage: NextPage = () => {
         </form>
       </SiteHeaderItem>
       <SiteHeaderItem>
-        <img className={styles.userIcon} src="/profile.png" />
+        <UserIcon src="/profile.png" />
       </SiteHeaderItem>
     </>
   )
@@ -82,9 +83,6 @@ const PostPage: NextPage = () => {
           onEdit={setContent}
         />
       </div>
-      <footer className={styles.footer}>
-        <Button className={styles.submitButton}>投稿する</Button>
-      </footer>
     </>
   )
 }

@@ -1,6 +1,9 @@
 import React from 'react'
 import { useRouter } from 'next/router'
 
+import { UserIcon } from '@/components/user-icon'
+import { Logo } from '@/components/logo'
+
 import styles from './index.module.css'
 
 export { SiteHeaderItem } from './item'
@@ -21,15 +24,11 @@ export const SiteHeader: React.FC<Props> = ({ left, right }) => {
     left
   ) : (
     <a onClick={handleClickLogo}>
-      <div>すごいブログ</div>
+      <Logo />
     </a>
   )
 
-  const rightElement = right ? (
-    right
-  ) : (
-    <img src="/profile.png" className={styles.userIcon} />
-  )
+  const rightElement = right ? right : <UserIcon src="/profile.png" />
   return (
     <header className={styles.header}>
       <div className={styles.left}>{leftElemennt}</div>
